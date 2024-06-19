@@ -62,35 +62,29 @@
                                 <th class="text-center" scope="col" colspan="2">Quantity</th>
                               </tr>
                             </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chicken
-                                </td>
-                                <td>
-                                    Large
-                                </td>
-                                <td>
-                                    <button type="button" class="btn orange-buttons" >-</button>
-                                    <span>
-                                        2
-                                    </span>
-                                    <button type="button" class="btn orange-buttons" >+</button>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn orange-buttons">Remove item</button>
-                                </td>
-                              </tr>
+                            <tbody id="cart-items">
+                              
                             </tbody>
                         </table>
                         <div style="height: 100px; display: flex; justify-content: center; align-items: center; ">
-                            <input type="submit" value="Order" class="btn orange-buttons">
+                            <button class="btn orange-buttons" onclick="order()"> Order </button>
                         </div>
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <h2 class="block-title text-center">
 						        Orders			
 					        </h2>
                         </div>
+                        <table class="table table-bordered text-center">
+                            <thead>
+                              <tr>
+                                <th class="text-center" scope="col">#</th>
+                                <th class="text-center" scope="col">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody id="order-items">
+                              
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -105,7 +99,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
-
+    <script src="js/my_profile.js"></script>
 </body>
 
 
