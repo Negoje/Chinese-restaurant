@@ -24,13 +24,14 @@ window.onload = function()
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="active"><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About us</a></li>
-                                    <li><a href="special_menu.html">Special Menu</a></li>
+                                    <!--<li><a href="special_menu.html">Special Menu</a></li>-->
                                     <li><a href="menu.html">Menu</a></li>
                                     <li><a href="our_team.html">Team</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="blog.html">Blog</a></li>
                                     <li><a href="pricing.html">pricing</a></li>
-                                    <li><a href="reservation.html">Reservaion</a></li>
+                                    <li><a href="reservation.html">Reservation</a></li>
+                                    <li><a href="my_profile.html">My profile</a></li>
                                     <li><a href="#stub-footer">Contact us</a></li>
                                 </ul>
                             </div>

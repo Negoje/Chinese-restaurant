@@ -1,0 +1,14 @@
+.orange-buttons{
+    background-color: #e75b1e; 
+    color: white
+}
+
+.vertically-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table span{
+    margin: 0 20px;
+}

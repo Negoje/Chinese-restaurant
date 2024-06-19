@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>Food Funday Restaurant - One page HTML Responsive</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <link rel="stylesheet" href="css/meal.css">
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+    <script src="js/meal.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div id="about" class="about-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 id="meal-name" class="block-title"> Egg rolls </h2>
+                        <p id="meal-description"> Egg rolls are fried, savory rolls, filled with cabbage, chopped Chinese roast pork. </p>
+                        <h3> Price: </h3>
+                        <table class="table text-center">
+                            <thead >
+                                <tr>
+                                    <th class="text-center"> Size </th>
+                                    <th class="text-center"> Price </th>
+                                    <th class="text-center"> Quantity </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Small </td>
+                                    <td id="meal-price-small"> 5$ </td>
+                                    <td>
+                                        <button class="btn orange-buttons" onclick="reduce('small')">-</button>
+                                        <span id="meal-quantity-small">0</span>
+                                        <button class="btn orange-buttons" onclick="add('small')">+</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn orange-buttons" onclick="addToCart('small')">Add to cart</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> Large </td>
+                                    <td id="meal-price-large"> 9$ </td>
+                                    <td>
+                                        <button class="btn orange-buttons" onclick="reduce('large')">-</button>
+                                        <span id="meal-quantity-large">0</span>
+                                        <button class="btn orange-buttons" onclick="add('large')">+</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn orange-buttons" onclick="addToCart('large')">Add to cart</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3> Rating </h3>
+                        <span id="meal-rating">4 </span>
+                        <span class="fa fa-star star-checked"></span>
+                        <h3> Rate it </h3>
+
+                        <a href="javascript:void(0);">
+                            <span id="star_1" class="fa fa-star" onclick="rateStar(1)"></span>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <span id="star_2" class="fa fa-star" onclick="rateStar(2)"></span>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <span id="star_3" class="fa fa-star" onclick="rateStar(3)"></span>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <span id="star_4" class="fa fa-star" onclick="rateStar(4)"></span>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <span id="star_5" class="fa fa-star" onclick="rateStar(5)"></span>
+                        </a>
+                
+                        <br>
+                        <button class="btn orange-buttons" onclick="rateMeal()">Rate</button>
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <div class="about-images">
+                            <img id="meal-image" src="images/egg-roll.jpg" class="about-main" alt="About Main Image">
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+    </div>
+
+    <div id="stub-footer"></div>
+    <script src="js/navbar_footer_loader.js"></script>
+    <script src="js/meal.js"></script>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+
+    
