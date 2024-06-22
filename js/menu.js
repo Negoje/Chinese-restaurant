@@ -2,7 +2,8 @@ function redirectToMeal(which_meal)
 {
     localStorage.setItem("meal", JSON.stringify(which_meal));
     
-    window.location.href = "meal.html";
+    // window.location.href = "meal.html";
+    updateNavigationPath(which_meal, "meal.html");
 }
 
 mealNames = ["egg-roll", "boiled-dumplings", "peanut-butter", "kung-pao", "szechuan-pork", "rice", "fried-ice-cream", "fried-fruit", "batman-cake", "beer", "coca-cola", "water"];

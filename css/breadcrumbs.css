@@ -1,0 +1,14 @@
+#breadcrumbs{
+
+    text-align: left;
+
+    padding: 0 10px 10px 10px;
+
+}
+
+#breadcrumbs a{
+
+    color: #e75b1e;
+    font-weight: bold;
+
+}

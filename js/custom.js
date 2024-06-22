@@ -87,8 +87,16 @@
 		
 		 $('.slider-nav')
 			.on('init', function(event, slick) {
-				$('.slider-nav .slick-slide.slick-current').addClass('is-active');
-				localStorage.setItem('currentSlide', 0); //mozda promeniti zbog breadcrumbs da se vrati na bas onaj koj je bio!!!
+				// $('.slider-nav .slick-slide.slick-current').addClass('is-active');
+				let slide = 0;
+
+				if(localStorage.getItem('currentSlide') !== null) {
+					slide = localStorage.getItem('currentSlide');
+				}
+				
+				$('.slider-single').slick('slickGoTo', slide);
+				
+				localStorage.setItem('currentSlide', slide); //mozda promeniti zbog breadcrumbs da se vrati na bas onaj koj je bio!!!
 			})
 			.slick({
 				slidesToShow: 4,
@@ -122,12 +130,16 @@
 			var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
 			$('.slider-nav .slick-slide.is-active').removeClass('is-active');
 			$(currrentNavSlideElem).addClass('is-active');
-			localStorage.setItem('currentSlide', currentSlide);
+			
 		 });
 		
 		 $('.slider-nav').on('click', '.slick-slide', function(event) {
 			event.preventDefault();
+			// alert("clicked");
 			var goToSingleSlide = $(this).data('slick-index');
+
+			localStorage.setItem('currentSlide', goToSingleSlide);
+			setNavigationPath('Menu', 'menu.html');
 		
 			$('.slider-single').slick('slickGoTo', goToSingleSlide);
 		 });
