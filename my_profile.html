@@ -60,12 +60,16 @@
                                 <th class="text-center" scope="col">Meal</th>
                                 <th class="text-center" scope="col">Size</th>
                                 <th class="text-center" scope="col" colspan="2">Quantity</th>
-                              </tr>
+                                <th class="text-center" scope="col">Price</th>
+                            </tr>
                             </thead>
                             <tbody id="cart-items">
                               
                             </tbody>
                         </table>
+                        <div style="height: 30px; display: flex; justify-content: center; align-items: center; ">
+                            Total price: <span id="total-price">0</span>
+                        </div>
                         <div style="height: 100px; display: flex; justify-content: center; align-items: center; ">
                             <button class="btn orange-buttons" onclick="order()"> Order </button>
                         </div>

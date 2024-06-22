@@ -17,9 +17,12 @@ function loadCart() {
             <td>
             <button type="button" class="btn orange-buttons" onclick="removeItem(${i})">Remove item</button>
             </td>
+            <td>${cart_item.price}</td>
         `;
         document.getElementById('cart-items').appendChild(element);
     }
+
+    updateTotalPrice();
 }
 
 function loadOrders() {
@@ -57,6 +60,8 @@ function add(id){
         document.getElementById(`quantity-${id}`).textContent = item.quantity;
         localStorage.setItem('cart', JSON.stringify(cart));
     }
+
+    updateTotalPrice();
 }
 
 function reduce(id){
@@ -67,6 +72,8 @@ function reduce(id){
         document.getElementById(`quantity-${id}`).textContent = item.quantity;
         localStorage.setItem('cart', JSON.stringify(cart));
     }
+
+    updateTotalPrice();
 }
 
 function removeItem(id){
@@ -74,6 +81,7 @@ function removeItem(id){
     cart.splice(id, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     location.reload();
+    
 }
 
 function order(){
@@ -98,4 +106,19 @@ function order(){
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.removeItem('cart');
     location.reload();
+}
+
+
+function updateTotalPrice(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    if (cart == null) {
+        return;
+    }
+    let total = 0;
+    for(let i = 0; i < cart.length; i++){
+        let item = cart[i];
+        let price = parseFloat(item.price.substring(1));
+        total += price * item.quantity;
+    }
+    document.getElementById('total-price').textContent = `$${total.toFixed(2)}`;
 }

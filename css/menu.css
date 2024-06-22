@@ -1,0 +1,43 @@
+#sorting-options{
+    width: 100%;
+    padding: 1vh 1vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#sorting-options button{
+    padding: 1vh 1vw;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+#sorting-options button:hover{
+    background-color: #e75b1e;
+    color: white;
+}
+
+#filtering-options{
+    width: 100%;
+    padding: 1vh 1vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#filtering-options button{
+    padding: 1vh 1vw;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+#filtering-options button:hover{
+    background-color: #e75b1e;
+    color: white;
+}
+
+#filtering-options input{
+    padding: 1vh 1vw;
+    border: none;
+    background-color: #f1f1f1;
+}

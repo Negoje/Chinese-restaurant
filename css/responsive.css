@@ -224,7 +224,7 @@
 		height: 65px;
 		line-height: 65px;
 		font-size: 18px;
-		display:none;
+		/* display:none; */
 	}
 	.offer-item div{
 		width: 70%;
@@ -319,7 +319,7 @@
 		height: 65px;
 		line-height: 65px;
 		font-size: 18px;
-		display:none;
+		/* display:none; */
 	}
 	.offer-item div{
 		width: 100%;

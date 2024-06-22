@@ -24,8 +24,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+
     <!-- color -->
     <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
 
@@ -53,7 +55,7 @@
                         <h2 class="block-title text-center">
 						Our Menu 	
 					</h2>
-                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                        <p class="title-caption text-center"> There are plenty of different and original tastes on our menu so be sure to try as much as you can!!! We recomend our chef's specialty - Peanut Butter! </p>
                     </div>
                     <div class="tab-menu">
                         <div class="slider slider-nav">
@@ -74,14 +76,25 @@
                                 <p> <i class="flaticon-coffee"></i> </p>
                             </div>
                         </div>
+                        <div id="sorting-options">
+                            <button id="sortByName" onclick="sortMealsByName()">Sort by Name</button>
+                            <button id="sortByPrice" onclick="sortMealsByPrice()">Sort by Price</button>
+                        </div>
+                        <div id="filtering-options">
+                            <input type="text" id="filterByName" placeholder="Filter by Name">
+                            <input type="number" step="0.5" id="minPrice" placeholder="Min Price">
+                            <input type="number" step="0.5" id="maxPrice" placeholder="Max Price">
+                            <button onclick="filterItems()">Apply Filters</button>
+                        </div>
+                        
                         <div class="slider slider-single">
-                            <div>
+                            <div id="starters-menu">
                                 <a href="javascript:void(0);">
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
                                         <div class="offer-item" onclick="redirectToMeal('egg-roll')">
                                             <img src="images/egg-roll.jpg" alt="" class="img-responsive">
                                             <div>
-                                                <h3>EGG ROLL</h3>
+                                                <h3>Egg rolls</h3>
                                                 <p>
                                                     Egg rolls with cabbage and roast pork in the filling.
                                                 </p>
@@ -101,7 +114,7 @@
                                                     Dumplings filled with pork and cabbage, served with soy sauce.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$25</span>
+                                            <span class="offer-price">$10</span>
                                         </div>
                                     </div>
                                 </a>
@@ -116,133 +129,151 @@
                                                     Peanut butter with bread.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$10</span>
+                                            <span class="offer-price">$11</span>
                                         </div>
                                     </div>
                                 </a>
                                 <!-- end col -->
                             </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                            <div id="main-dishes-menu">
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('kung-pao')">
+                                            <img src="images/kung-pao.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Kung Pao Chicken</h3>
+                                                <p>
+                                                    Chicken stir-fried with peanuts, vegetables, and chili peppers.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$14</span>
                                         </div>
-                                        <span class="offer-price">$5</span>
                                     </div>
-                                </div>
+                                </a>
                                 <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-05.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('szechuan-pork')">
+                                            <img src="images/szechuan-pork.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Szechuan Pork</h3>
+                                                <p>
+                                                    Pork in spicy Szechuan sauce stirred with eggplant and chili peppers.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$16</span>
                                         </div>
-                                        <span class="offer-price">$15</span>
                                     </div>
-                                </div>
+                                </a>
                                 <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-06.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>SPICY MEATBALLS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('rice')">
+                                            <img src="images/rice.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>2KG of Rice</h3>
+                                                <p>
+                                                    Just a lot of rice!!!
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$30</span>
                                         </div>
-                                        <span class="offer-price">$6.5</span>
                                     </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHOCOLATE FUDGECAKE</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$4.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
+                                </a>
                                 <!-- end col -->
                             </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                            <div id="deserts-menu">
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('fried-ice-cream')">
+                                            <img src="images/fried-ice-cream.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Fried Ice Cream</h3>
+                                                <p>
+                                                    Our special fried ice cream. It comes in different flavors. (Vanilla, Chocolate, Strawberry, and the most special one PEANUT BUTTER)
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$12</span>
                                         </div>
-                                        <span class="offer-price">$12.5</span>
                                     </div>
-                                </div>
+                                </a>
                                 <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('fried-fruit')">
+                                            <img src="images/fried-fruit.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Fried Fruit</h3>
+                                                <p>
+                                                    Fried fruit with syrup and toppings. (Apple, Banana, Strawberry, and Pineapple)
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$10</span>
                                         </div>
-                                        <span class="offer-price">$9.5</span>
                                     </div>
-                                </div>
+                                </a>
                                 <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('batman-cake')">
+                                            <img src="images/batman-cake.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>The Chinese Batman Cake</h3>
+                                                <p>
+                                                    Original Wuhan Batman cake! (It's a chocolate cake (TRUST US 100% chocolate))
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15</span>
                                         </div>
-                                        <span class="offer-price">$5.5</span>
                                     </div>
-                                </div>
+                                </a>
+                                <!-- end col -->
+                            </div>
+                            <div id="drinks-menu">
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('beer')">
+                                            <img src="images/beer.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Beer</h3>
+                                                <p>
+                                                    Beer! (We have a lot of brands, just ask for your favorite one)
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$4</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- end col -->
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('coca-cola')">
+                                            <img src="images/coca-cola.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Coca Cola</h3>
+                                                <p>
+                                                    Coca Cola! 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$2.5</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- end col -->
+                                <a href="javascript:void(0);">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " >
+                                        <div class="offer-item" onclick="redirectToMeal('water')">
+                                            <img src="images/water.jpg" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Water</h3>
+                                                <p>
+                                                    Water approved by our special water taster. (Min Yao approved)
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$3</span>
+                                        </div>
+                                    </div>
+                                </a>
                                 <!-- end col -->
                             </div>
                         </div>

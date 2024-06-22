@@ -15,7 +15,7 @@ window.onload = function()
                                     <span class="icon-bar"></span>
                                 </button>
                                 <div class="logo">
-                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="index.html">
                                         <img src="images/logo.png" alt="">
                                     </a>
                                 </div>
@@ -200,6 +200,17 @@ window.onload = function()
         <!-- end footer-box -->
     </div>
     <!-- end footer-main -->`;
+
+    if (currentPage === 'menu.html' || currentPage === 'index.html') {
+        // alert("initAllMeals");
+        initAllMeals();
+
+        if (currentPage === 'index.html') {
+            // alert("initMenu");
+            initTop3Meals();
+        }
+
+    }
 
     
 }

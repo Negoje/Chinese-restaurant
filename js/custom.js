@@ -58,15 +58,15 @@
             CAROUSEL 
         =========================*/
 		
-		$(document).ready(function() {
-		  $("#owl-demo").owlCarousel({
-			  //autoPlay: 3000, //Set AutoPlay to 3 seconds
-			  items : 3,
-			  itemsDesktop : [1199,3],
-			  itemsDesktopSmall : [979,2]
+		// $(document).ready(function() {
+		//   $("#owl-demo").owlCarousel({
+		// 	  //autoPlay: 3000, //Set AutoPlay to 3 seconds
+		// 	  items : 3,
+		// 	  itemsDesktop : [1199,3],
+		// 	  itemsDesktopSmall : [979,2]
 		 
-		  });
-		});
+		//   });
+		// });
 		
 		/* ========================
 			SLIDER - TAB 
@@ -88,6 +88,7 @@
 		 $('.slider-nav')
 			.on('init', function(event, slick) {
 				$('.slider-nav .slick-slide.slick-current').addClass('is-active');
+				localStorage.setItem('currentSlide', 0); //mozda promeniti zbog breadcrumbs da se vrati na bas onaj koj je bio!!!
 			})
 			.slick({
 				slidesToShow: 4,
@@ -121,6 +122,7 @@
 			var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
 			$('.slider-nav .slick-slide.is-active').removeClass('is-active');
 			$(currrentNavSlideElem).addClass('is-active');
+			localStorage.setItem('currentSlide', currentSlide);
 		 });
 		
 		 $('.slider-nav').on('click', '.slick-slide', function(event) {
