@@ -6,7 +6,7 @@ window.onload = function()
             <div class="container">
                 <div class="row">
                     <div class="main-menu">
-                        <nav class="navbar navbar-default" id="mainNav" >
+                        <nav class="navbar navbar-default" id="mainNav">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                     <span class="sr-only">Toggle navigation</span>
@@ -24,15 +24,21 @@ window.onload = function()
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="active"><a href="index.html">Home</a></li>
                                     <li><a href="about.html" onclick="setNavigationPath('About us')">About us</a></li>
-                                    <!--<li><a href="special_menu.html">Special Menu</a></li>-->
                                     <li><a href="menu.html" onclick="setNavigationPath('Menu')">Menu</a></li>
-                                    <!--<li><a href="our_team.html">Team</a></li>-->
                                     <li><a href="gallery.html" onclick="setNavigationPath('Gallery')">Gallery</a></li>
-                                    <!--<li><a href="blog.html">Blog</a></li>-->
-                                    <!--<li><a href="pricing.html">Pricing</a></li>-->
-                                    <!--<li><a href="reservation.html">Reservation</a></li>-->
                                     <li><a href="my_profile.html" onclick="setNavigationPath('My Profile')">My profile</a></li>
                                     <li><a href="#stub-footer">Contact us</a></li>
+                                    <!-- Language Dropdown Button -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Language <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li onclick="changeLanguage('se')"><a href="#"><img src="images/serbian-flag.jpg" alt="Serbian"> Serbian</a></li>
+                                            <li onclick="changeLanguage('en')"><a href="#"><img src="images/english-flag.png" alt="English"> English</a></li>
+                                            <li onclick="changeLanguage('ch')"><a href="#"><img src="images/chinese-flag.png" alt="Chinese"> Chinese</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </nav>
@@ -41,6 +47,9 @@ window.onload = function()
             </div>
         </header>
     </div>`;
+
+    
+
 
     const currentPage = window.location.pathname.split('/').pop();
 
@@ -212,9 +221,18 @@ window.onload = function()
 
     }
 
+    if (localStorage.getItem('language') === null) {
+        localStorage.setItem('language', JSON.stringify('en'));
+    }
+
     if (currentPage !== 'index.html') {
         displayBreadcrumbs();
     }
 
     
+}
+
+function changeLanguage(language) {
+    localStorage.setItem('language', JSON.stringify(language));
+    location.reload();
 }

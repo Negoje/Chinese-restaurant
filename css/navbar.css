@@ -1,0 +1,23 @@
+
+.dropdown-menu img {
+    height: 20px;
+    width: auto; 
+    object-fit: contain; 
+}
+.dropdown-menu {
+    background-color: #222;
+    color: white; 
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #b4b4b4;
+    color: #333; 
+}
+.dropdown-toggle:focus, .dropdown-toggle:hover{
+    background-color: #b4b4b4; 
+    color: white; 
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #b4b4b4;
+    color: white;
+}

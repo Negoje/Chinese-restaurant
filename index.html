@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- color -->
     <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+    <link rel="stylesheet" href="css/navbar.css">
 
     <!-- Modernizer -->
     <script src="js/modernizer.js"></script>
@@ -51,11 +52,11 @@
                 <div class="banner-static">
                     <div class="banner-text">
                         <div class="banner-cell">
-                            <h1>Eat with us  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Friends:Family:Legends:Sigmas" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
-                            <h2>Accidental appearances </h2>
-                            <p>Welcome to the best chinese restaurant in the world!!! </p>
+                            <h1 data-translate-key="index-h1-welcome" id="index-welcome">Eat with us  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Friends:Family:Legends:Sigmas" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h2 data-translate-key="index-h2-welcome">Accidental appearances </h2>
+                            <p data-translate-key="index-p-welcome">Welcome to the best chinese restaurant in the world!!! </p>
                             <br>
-                            <p>
+                            <p data-translate-key="index-p-special-offer">
                                 SPECAIL OFFER: Who ever eats the 2kg Rice in 45min gets it for free! Plus the bonus 3 beers!!!
                             </p>
                         </div>
@@ -80,8 +81,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title color-white text-center"> Customers' favorite meals </h2>
-                        <h5 class="title-caption text-center"> Here you can see 3 of our best rated meals. These are the ones chosen by our dear customers </h5>
+                        <h2 data-translate-key="index-h2-meals" class="block-title color-white text-center"> Customers' favorite meals </h2>
+                        <h5 data-translate-key="index-h5-meals" class="title-caption text-center"> Here you can see 3 of our best rated meals. These are the ones chosen by our dear customers </h5>
                     </div>
                     <div class="special-box">
                         <div id="owl-demo">
@@ -102,12 +103,14 @@
 
     <div id="stub-footer"></div>
     <script src="js/navbar_footer_loader.js"></script>
+    <script src="js/translate_index.js"></script>
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+    
 </body>
 
 
