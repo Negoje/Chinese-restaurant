@@ -185,6 +185,19 @@ function initAllMeals(){
 
 }
 
+function loadMeals() {
+    for(let i = 0; i < mealNames.length; i++){
+        let meal_details = JSON.parse(localStorage.getItem(mealNames[i]));
+        console.log('menu-meal-name-' + mealNames[i]);
+        document.getElementById('menu-meal-name-' + mealNames[i]).innerHTML = meal_details.name;
+        document.getElementById('menu-meal-description-' + mealNames[i]).innerHTML = meal_details.description;
+        document.getElementById('menu-meal-price-' + mealNames[i]).innerHTML = meal_details.price_large;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadMeals);
+
+
 categoryNames = ["starters", "main-dishes", "deserts", "drinks"];
 
 function sortMealsByName(){
