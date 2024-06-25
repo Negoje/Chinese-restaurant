@@ -5,7 +5,7 @@ const translations = {
       },
     se:
       {
-        "gallery-h2-title" : "Nasa Galerija",
+        "gallery-h2-title" : "Naša Galerija",
     },
     ch:
       {
