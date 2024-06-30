@@ -57,8 +57,8 @@ const meal_translations = {
             "description": "Prolećne rolnice su pržene, slane rolnice, punjene kupusom i seckanom kineskom pečenom svinjetinom."
         },
         "boiled-dumplings": {
-            "name": "Kuvani knedle",
-            "description": "Kuvani knedle su ukusno, tradicionalno kinesko jelo napravljeno od jednostavnog testa i punjeno mešavinom svinjetine i povrća."
+            "name": "Kuvane knedle",
+            "description": "Kuvane knedle su ukusno, tradicionalno kinesko jelo napravljeno od jednostavnog testa i punjeno mešavinom svinjetine i povrća."
         },
         "peanut-butter": {
             "name": "Kikiriki puter",

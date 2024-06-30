@@ -40,6 +40,25 @@
     }
     
   };
+
+
+  placeholders = {
+    "filterByName": {
+      "en": "Filter by Name",
+      "se": "Filtriraj po imenu",
+      "ch": "按名称过滤"
+    },
+    "minPrice": {
+      "en": "Min Price",
+      "se": "Minimalna cena",
+      "ch": "最低价格"
+    },
+    "maxPrice": {
+      "en": "Max Price",
+      "se": "Maksimalna cena",
+      "ch": "最高价格"
+    }
+  }
   
   let currentLanguage = JSON.parse(localStorage.getItem('language')) || 'en';
   
@@ -48,6 +67,14 @@
   }
   
   function updateTextContent() {
+
+    for (const key in placeholders) {
+      if (Object.hasOwnProperty.call(placeholders, key)) {
+        const element = document.getElementById(key);
+        element.placeholder = placeholders[key][currentLanguage];
+      }
+    }
+
     document.querySelectorAll('[data-translate-key]').forEach(element => {
       const key = element.getAttribute('data-translate-key');
       element.textContent = translate(key);

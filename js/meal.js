@@ -81,6 +81,7 @@ function addToCart(size){
         {
             let upper_size = size.charAt(0).toUpperCase() + size.slice(1);
             let cart_item = {
+                "meal_code": which_meal,
                 "name": meal_details.name,
                 "size": upper_size,
                 "quantity": quantity,

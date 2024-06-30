@@ -1,5 +1,22 @@
 window.onload = function() 
 {
+
+    navItems = []
+
+    let currentLanguage = JSON.parse(localStorage.getItem('language')) || 'en';
+
+    switch (currentLanguage) {
+        case 'en':
+            navItems = ['Home', 'About us', 'Menu', 'Gallery', 'My Profile', 'Contact us', 'Language'];
+            break;
+        case 'se':
+            navItems = ['Početna', 'O nama', 'Meni', 'Galerija', 'Moj profil', 'Kontaktirajte nas', 'Jezik'];
+            break;
+        case 'ch':
+            navItems = ['主页', '关于我们', '菜单', '画廊', '我的个人资料', '联系我们', '语言'];
+            break;
+    }
+
     document.getElementById('header').innerHTML = 
     `<div id="site-header">
         <header id="header" class="header-block-top fixed-menu">
@@ -22,16 +39,16 @@ window.onload = function()
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html" onclick="setNavigationPath('About us')">About us</a></li>
-                                    <li><a href="menu.html" onclick="setNavigationPath('Menu')">Menu</a></li>
-                                    <li><a href="gallery.html" onclick="setNavigationPath('Gallery')">Gallery</a></li>
-                                    <li><a href="my_profile.html" onclick="setNavigationPath('My Profile')">My profile</a></li>
-                                    <li><a href="#stub-footer">Contact us</a></li>
+                                    <li class="active"><a href="index.html">` + navItems[0] + `</a></li>
+                                    <li><a href="about.html" onclick="setNavigationPath('About us')">` + navItems[1] + `</a></li>
+                                    <li><a href="menu.html" onclick="setNavigationPath('Menu')">` + navItems[2] + `</a></li>
+                                    <li><a href="gallery.html" onclick="setNavigationPath('Gallery')">` + navItems[3] + `</a></li>
+                                    <li><a href="my_profile.html" onclick="setNavigationPath('My Profile')">` + navItems[4] + `</a></li>
+                                    <li><a href="#stub-footer">` + navItems[5] + `</a></li>
                                     <!-- Language Dropdown Button -->
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            Language <span class="caret"></span>
+                                            ` + navItems[6] + `<span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li onclick="changeLanguage('se')"><a href="#"><img src="images/serbian-flag.jpg" alt="Serbian"> Serbian</a></li>
@@ -71,24 +88,25 @@ window.onload = function()
         }
     });
 
+
+    footerTranlsations = []
+
+    switch (currentLanguage) {
+        case 'en':
+            footerTranlsations = ["Contact us", "Opening hours", "Monday - Friday", "Saturday", "Sunday", "Copyright © 2024 Filip Stevanovic, Filip Negojevic Software Engineering Department, Faculty of Electrical Engineering, University of Belgrade"]
+            break;
+        case 'se':
+            footerTranlsations = ["Kontaktirajte nas", "Radno vreme", "Ponedeljak - Petak", "Subota", "Nedelja", "Autorska prava © 2024 Filip Stevanovic, Filip Negojevic Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu"]
+            break;
+
+        case 'ch':
+            footerTranlsations = ["联系我们", "营业时间", "星期一 - 星期五", "星期六", "星期日", "版权所有 © 2024 Filip Stevanovic, Filip Negojevic 软件工程系，贝尔格莱德大学电气工程学院"]
+            break;
+    }
+
+
     document.getElementById('stub-footer').innerHTML = 
     `<div id="footer" class="footer-main">
-    <!--<div class="footer-news pad-top-100 pad-bottom-70 parallax">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <h2 class="ft-title color-white text-center"> Newsletter </h2>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <form>
-                            <input type="email" placeholder="Enter your e-mail id">
-                            <a href="#" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <!-- end footer-news -->
         <div class="footer-box pad-top-70">
             <div class="container">
@@ -99,66 +117,17 @@ window.onload = function()
                                 <img src="images/logo.png" alt="" />
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="footer-box-a">
-                                <h3>About Us</h3>
-                                <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes.</p>
-                                <ul class="socials-box footer-socials pull-left">
-                                    <li>
-                                        <a href="#">
-                                            <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="social-circle-border"><i class="fa fa-google-plus"></i></div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="social-circle-border"><i class="fa fa-pinterest"></i></div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- end footer-box-a -->
-                        </div>
-                        <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="footer-box-b">
-                                <h3>New Menu</h3>
-                                <ul>
-                                    <li><a href="#">Italian Bomba Sandwich</a></li>
-                                    <li><a href="#">Double Dose of Pork Belly</a></li>
-                                    <li><a href="#">Spicy Thai Noodles</a></li>
-                                    <li><a href="#">Triple Truffle Trotters</a></li>
-                                </ul>
-                            </div>
-                            <!-- end footer-box-b -->
-                        </div>
-                        <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="footer-box-c">
-                                <h3>Contact Us</h3>
+                                <h3>` + footerTranlsations[0] + `</h3>
                                 <p>
                                     <i class="fa fa-map-signs" aria-hidden="true"></i>
-                                    <span>6 E Esplanade, St Albans VIC 3021, Australia</span>
+                                    <span>China, Shanghai, Jing'An, 3699, Gonghexin Rd, 3699临号1层A栋 邮政编码: 200435</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                     <span>
-									+91 80005 89080 
+									+86 13126969
 								</span>
                                 </p>
                                 <p>
@@ -169,18 +138,22 @@ window.onload = function()
                             <!-- end footer-box-c -->
                         </div>
                         <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="footer-box-d">
-                                <h3>Opening Hours</h3>
+                                <h3>` + footerTranlsations[1] + `</h3>
 
                                 <ul>
                                     <li>
-                                        <p>Monday - Thursday </p>
-                                        <span> 11:00 AM - 9:00 PM</span>
+                                        <p> ` + footerTranlsations[2] + `</p>
+                                        <span> 11:00 AM - 11:00 PM</span>
                                     </li>
                                     <li>
-                                        <p>Friday - Saturday </p>
-                                        <span>  11:00 AM - 5:00 PM</span>
+                                        <p> ` + footerTranlsations[3] + ` </p>
+                                        <span>  1:00 PM - 1:00 AM</span>
+                                    </li>
+                                    <li>
+                                        <p> ` + footerTranlsations[4] + `</p>
+                                        <span>  1:00 PM - 11:00 PM</span>
                                     </li>
                                 </ul>
                             </div>
@@ -197,7 +170,7 @@ window.onload = function()
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h6 class="copy-title"> Copyright &copy; 2024 Filip Stevanovic, Filip Negojevic Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu </h6>
+                            <h6 class="copy-title"> ` + footerTranlsations[5] + ` </h6>
                         </div>
                     </div>
                     <!-- end row -->

@@ -41,3 +41,20 @@
     border: none;
     background-color: #f1f1f1;
 }
+
+#generate-pdf{
+    padding: 1vh 1vw;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+#generate-pdf:hover{
+    background-color: #e75b1e;
+    color: white;
+}
+
+.pdf-container{
+    display: flex;
+    justify-content: center;
+}

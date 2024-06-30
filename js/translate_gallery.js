@@ -1,15 +1,18 @@
 const translations = {
     en: 
       {
-        "gallery-h2-title" : "Our Gallery",
+        "video-gallery-h2-title" : "Our Video Gallery",
+        "photo-gallery-h2-title" : "Our Photo Gallery",
       },
     se:
       {
-        "gallery-h2-title" : "Naša Galerija",
+        "video-gallery-h2-title" : "Naša Video Galerija",
+        "photo-gallery-h2-title" : "Naša Galerija Fotografija",
     },
     ch:
       {
-        "gallery-h2-title" : "我们的画廊",
+        "video-gallery-h2-title" : "我们的视频库",
+        "photo-gallery-h2-title" : "我们的照片库",
     }
   };
   

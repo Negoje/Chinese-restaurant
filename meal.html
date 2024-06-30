@@ -37,6 +37,7 @@
     <script src="js/meal.js"></script>
     <script src="js/breadcrumbs.js"></script>
     <script src="js/translate_meals.js"></script>
+    <script src="js/translate_meal.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -61,18 +62,18 @@
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 id="meal-name" class="block-title"> Egg rolls </h2>
                         <p id="meal-description"> Egg rolls are fried, savory rolls, filled with cabbage, chopped Chinese roast pork. </p>
-                        <h3> Price: </h3>
+                        <h3 data-translate-key="meal-h3-price"> Price: </h3>
                         <table class="table text-center">
                             <thead >
                                 <tr>
-                                    <th class="text-center"> Size </th>
-                                    <th class="text-center"> Price </th>
-                                    <th class="text-center"> Quantity </th>
+                                    <th class="text-center" data-translate-key="meal-th-size"> Size </th>
+                                    <th class="text-center" data-translate-key="meal-th-price"> Price </th>
+                                    <th class="text-center" data-translate-key="meal-th-quantity"> Quantity </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> Small </td>
+                                    <td data-translate-key="meal-td-small"> Small </td>
                                     <td id="meal-price-small"> 5$ </td>
                                     <td>
                                         <button class="btn orange-buttons" onclick="reduce('small')">-</button>
@@ -80,11 +81,11 @@
                                         <button class="btn orange-buttons" onclick="add('small')">+</button>
                                     </td>
                                     <td>
-                                        <button class="btn orange-buttons" onclick="addToCart('small')">Add to cart</button>
+                                        <button class="btn orange-buttons" onclick="addToCart('small')" data-translate-key="meal-btn-addcart">Add to cart</button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td> Large </td>
+                                    <td data-translate-key="meal-td-large"> Large </td>
                                     <td id="meal-price-large"> 9$ </td>
                                     <td>
                                         <button class="btn orange-buttons" onclick="reduce('large')">-</button>
@@ -92,15 +93,15 @@
                                         <button class="btn orange-buttons" onclick="add('large')">+</button>
                                     </td>
                                     <td>
-                                        <button class="btn orange-buttons" onclick="addToCart('large')">Add to cart</button>
+                                        <button class="btn orange-buttons" onclick="addToCart('large')" data-translate-key="meal-btn-addcart">Add to cart</button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <h3> Rating </h3>
+                        <h3 data-translate-key="meal-h3-rating"> Rating </h3>
                         <span id="meal-rating">4 </span>
                         <span class="fa fa-star star-checked"></span>
-                        <h3> Rate it </h3>
+                        <h3 data-translate-key="meal-h3-rateit"> Rate it </h3>
 
                         <a href="javascript:void(0);">
                             <span id="star_1" class="fa fa-star" onclick="rateStar(1)"></span>
@@ -119,7 +120,7 @@
                         </a>
                 
                         <br>
-                        <button class="btn orange-buttons" onclick="rateMeal()">Rate</button>
+                        <button class="btn orange-buttons" onclick="rateMeal()" data-translate-key="meal-btn-rate">Rate</button>
                     </div>
                 </div>
                 <!-- end col -->

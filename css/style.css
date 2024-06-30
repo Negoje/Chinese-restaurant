@@ -1067,6 +1067,12 @@ html, body{ height: 100%; }
 	object-fit:cover;
 	-o-object-fit:cover;
 }
+.box video{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    -o-object-fit:cover;
+}
 .gal-item a:focus{
 	outline: none;
 }

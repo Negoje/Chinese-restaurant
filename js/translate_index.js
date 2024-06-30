@@ -4,7 +4,7 @@ const translations = {
         "index-h1-welcome": "Eat with us <span class=\"typer\" id=\"some-id\" data-delay=\"200\" data-delim=\":\" data-words=\"Friends:Family:Legends:Sigmas\" data-colors=\"red\"></span><span class=\"cursor\" data-cursorDisplay=\"_\" data-owner=\"some-id\"></span>",
         // "index-h2-welcome": "Accidental appearances",
         "index-h2-welcome": "Welcome to the best chinese restaurant in the world!!!",
-        "index-p-special-offer": "SPECAIL OFFER: Who ever eats the 2kg Rice in 45min gets it for free! Plus the bonus 3 beers!!!",
+        "index-p-special-offer": "SPECIAL OFFER: Who ever eats the 2kg Rice in 45min gets it for free! Plus the bonus 3 beers!!!",
         "index-h2-meals": "Customers' favorite meals",
         "index-h5-meals": "Here you can see 3 of our best rated meals. These are the ones chosen by our dear customers"
       },

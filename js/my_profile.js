@@ -1,5 +1,30 @@
+size_translations = {
+    "en": {
+        "Small": "Small",
+        "Large": "Large"
+    },
+    "se":{
+        "Small": "Mala",
+        "Large": "Velika"
+    },
+    "ch": {
+        "Small": "小",
+        "Large": "大"
+    }
+}
+
+remove_item_translations = {
+    "en": "Remove item",
+    "se": "Izbacite stavku",
+    "ch": "删除项目"
+}
+
+
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem('cart'));
+
+    let currentLanguage = JSON.parse(localStorage.getItem('language')) || 'en';
+
     if (cart == null) {
         return;
     }
@@ -8,14 +33,14 @@ function loadCart() {
         let element = document.createElement('tr');
         element.innerHTML = `
             <td>${cart_item.name}</td>
-            <td>${cart_item.size}</td>
+            <td>${size_translations[currentLanguage][cart_item.size]}</td>
             <td>
                 <button type="button" class="btn orange-buttons" onclick="reduce(${i})">-</button>
                 <span id="quantity-${i}">${cart_item.quantity}</span>
                 <button type="button" class="btn orange-buttons" onclick="add(${i})">+</button>
             </td>
             <td>
-            <button type="button" class="btn orange-buttons" onclick="removeItem(${i})">Remove item</button>
+            <button type="button" class="btn orange-buttons" onclick="removeItem(${i})">` + remove_item_translations[currentLanguage] +`</button>
             </td>
             <td>${cart_item.price}</td>
         `;
@@ -34,11 +59,30 @@ function loadOrders() {
     for (let i = 0; i < orders.length; i++) 
     {
         let order = orders[i];
+
+        let orderDescription = '';
+
+        for(let j = 0 ; j < order.length; j++) {
+
+            let orderItem = order[j];
+
+            orderItem["size"] = size_translations[currentLanguage][orderItem["size"]];
+
+            console.log(orderItem["code"]);
+
+            let name = meal_translations[currentLanguage][orderItem["code"]]["name"];
+
+            orderDescription += `${orderItem["quantity"]} x ${orderItem["size"]} ${name}`;
+
+            if(j < order.length - 1){
+                orderDescription += '<br>';
+            }
+        }
         
         let element = document.createElement('tr');
         element.innerHTML = `
             <td>${i + 1}</td>
-            <td>${order}</td>
+            <td>${orderDescription}</td>
         `;
         document.getElementById('order-items').appendChild(element);
     }
@@ -89,10 +133,18 @@ function order(){
     if (cart == null || cart.length == 0) {
         return;
     }
-    let order_description = '';
+    let newOrder = [];
     for(let i = 0; i < cart.length; i++){
         let item = cart[i];
-        order_description += `${item.quantity} ${item.size} ${item.name}<br>`;
+
+        let orderItem = {
+            code: item.meal_code,
+            size: item.size,
+            quantity: item.quantity
+        };
+
+        newOrder.push(orderItem);
+
     }
 
     let orders;
@@ -102,7 +154,7 @@ function order(){
         orders = JSON.parse(localStorage.getItem('orders'));
     }
 
-    orders.push(order_description);
+    orders.push(newOrder);
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.removeItem('cart');
     location.reload();

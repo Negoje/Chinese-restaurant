@@ -38,6 +38,7 @@
     <script src="js/menu.js"></script>
     <script src="js/breadcrumbs.js"></script>
     <script src="js/translate_meals.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -64,6 +65,9 @@
                         <h2 data-translate-key="menu-h2-welcome" class="block-title text-center">
 						Our Menu 	
 					</h2>
+                    <div class="pdf-container">
+                        <button id="generate-pdf">PDF Menu</button>
+                    </div>
                         <p data-translate-key="menu-p-welcome" class="title-caption text-center"> There are plenty of different and original tastes on our menu so be sure to try as much as you can!!! We recomend our chef's specialty - Peanut Butter! </p>
                     </div>
                     <div class="tab-menu">
@@ -300,6 +304,7 @@
     <div id="stub-footer"></div>
     <script src="js/navbar_footer_loader.js"></script>
     <script src="js/translate_menu.js"></script>
+    <script src="js/generatePDF.js"></script>
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
