@@ -68,18 +68,19 @@ function addToCart(size){
     if (quantity > 0) {
         let which_meal = JSON.parse(localStorage.getItem('meal'));
         let meal_details = JSON.parse(localStorage.getItem(which_meal));
+        console.log(which_meal)
         if (localStorage.getItem('cart') == null) {
             localStorage.setItem('cart', JSON.stringify([]));
         }
         let cart = JSON.parse(localStorage.getItem('cart'));
-        let foundItem = cart.find(item => item.name == meal_details.name && item.size == size);
+        let upper_size = size.charAt(0).toUpperCase() + size.slice(1);
+        let foundItem = cart.find(item => item.meal_code == which_meal && item.size == upper_size);
         if (foundItem != null) {
             foundItem.quantity += quantity;
             localStorage.setItem('cart', JSON.stringify(cart));
         }
         else
         {
-            let upper_size = size.charAt(0).toUpperCase() + size.slice(1);
             let cart_item = {
                 "meal_code": which_meal,
                 "name": meal_details.name,
