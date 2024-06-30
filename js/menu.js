@@ -338,12 +338,28 @@ function initTop3Meals(){
 
         meal = allMeals[i];
 
+        let currentLanguage = JSON.parse(localStorage.getItem('language')) || 'en';
+
+        let avgRatingText;
+
+        switch(currentLanguage){
+            case "en":
+                avgRatingText = "Average rating:";
+                break;
+            case "se":
+                avgRatingText = "Prosecna ocena:";
+                break;
+            case "ch":
+                avgRatingText = "平均评分:";
+                break;
+        }
+
         div.innerHTML += `
         <div class="item item-type-zoom">
             <a href="#" class="item-hover">
                 <div class="item-info">
                     <div class="headline">
-                        ` + (i + 1) + `:` + meal.name + `<br>Average rating:` + meal.rating + `
+                        ` + (i + 1) + `:` + meal.name + `<br>` + avgRatingText + meal.rating + `
                         <div class="line"></div>
                         <div class="dit-line">` + meal.description + `</div>
                     </div>

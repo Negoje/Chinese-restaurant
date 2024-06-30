@@ -77,12 +77,12 @@ const meal_translations = {
             "description": "Samo puno pirinča!!! (NEMA MALE PORCIJE)"
         },
         "fried-ice-cream": {
-            "name": "Prženi sladoled",
-            "description": "Naš specijalni prženi sladoled. Dolazi u različitim ukusima. (Vanila, čokolada, jagoda i najposebniji kikiriki puter)"
+            "name": "Pohovani sladoled",
+            "description": "Naš specijalni pohovani sladoled. Dolazi u različitim ukusima. (Vanila, čokolada, jagoda i najposebniji kikiriki puter)"
         },
         "fried-fruit": {
-            "name": "Prženo voće",
-            "description": "Prženo voće sa sirupom i prelivima. (Jabuka, banana, jagoda i ananas)"
+            "name": "Pohovano voće",
+            "description": "Pohovano voće sa sirupom i prelivima. (Jabuka, banana, jagoda i ananas)"
         },
         "batman-cake": {
             "name": "Kineska Batman torta",

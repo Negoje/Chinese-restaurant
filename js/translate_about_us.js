@@ -3,7 +3,7 @@ const translations = {
     {
       "about-us-h2-title": "About Us",
       "about-us-h3-welcome": "Welcome to Food Funday Restaurant",
-      "about-us-p-welcome": "Now in its 23rd year of holding three Michelin stars, Filip Stevanovic`s flagship restaurant provides elegant modern Chinese cuisine using the finest seasonal ingredients and employing both classic and modern techniques.",
+      "about-us-p-welcome": "Now in its 23rd year of holding three Michelin stars, Filip Stevanovic`s and Negoje's flagship restaurant provides elegant modern Chinese cuisine using the finest seasonal ingredients and employing both classic and modern techniques.",
       "about-us-h2-team": "Our Team",
       "about-us-p-mihajlo": "Mihajlo is a Serbian chef who has worked in some of the finest restaurants in Europe. He can cook anything you want, but his best dish is peanut butter with bread.",
       "about-us-p-adrian": "Adrian`s passion for cooking sparked at a young age, as he spent his childhood in the kitchen with his grandma in his hometown Shanghai, China",
@@ -16,7 +16,7 @@ const translations = {
     {
       "about-us-h2-title": "O nama",
       "about-us-h3-welcome": "Dobrodošli u restoran Food Funday",
-      "about-us-p-welcome": "Već 23 godine sa tri Michelinove zvezdice, restoran Filipa Stevanovića pruža elegantnu modernu kinesku kuhinju koristeći najfinije sezonske sastojke i primenjujući klasične i moderne tehnike.",
+      "about-us-p-welcome": "Već 23 godine sa tri Michelinove zvezdice, restoran Filipa Stevanovića i Negoja pruža elegantnu modernu kinesku kuhinju koristeći najfinije sezonske sastojke i primenjujući klasične i moderne tehnike.",
       "about-us-h2-team": "Naš tim",
       "about-us-p-mihajlo": "Mihajlo je srpski kuvar koji je radio u nekim od najboljih restorana u Evropi. Može da kuva bilo šta što poželite, ali njegov najbolji specijalitet je puter od kikirikija sa hlebom.",
       "about-us-p-adrian": "Adrianova strast za kuvanjem se probudila u ranom detinjstvu, jer je svoje detinjstvo provodio u kuhinji sa bakom u svom rodnom gradu Šangaju, Kina.",
@@ -29,7 +29,7 @@ const translations = {
     {
       "about-us-h2-title": "关于我们",
       "about-us-h3-welcome": "欢迎来到Food Funday餐厅",
-      "about-us-p-welcome": "自23年前以来, Filip Stevanovic的旗舰餐厅一直保持着三星米其林的荣誉, 提供优雅的现代中餐, 使用最优质的季节性食材, 并结合经典和现代技术。",
+      "about-us-p-welcome": "自23年前以来, Filip Stevanovic 和 Negoje 的旗舰餐厅一直保持着三星米其林的荣誉, 提供优雅的现代中餐, 使用最优质的季节性食材, 并结合经典和现代技术。",
       "about-us-h2-team": "我们的团队",
       "about-us-p-mihajlo": "Mihajlo是一位塞尔维亚厨师, 曾在欧洲一些最好的餐厅工作过。他能烹饪任何您想要的菜肴, 但他最拿手的是花生酱配面包。",
       "about-us-p-adrian": "Adrian对烹饪的热情从小就被激发, 因为他在家乡中国上海的厨房里与奶奶一起度过了童年。",
