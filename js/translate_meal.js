@@ -9,7 +9,8 @@ translations = {
     "meal-td-large": "Large",
     "meal-h3-rating": "Rating",
     "meal-h3-rateit": "Rate it!",
-    "meal-btn-rate": "Rate"
+    "meal-btn-rate": "Rate",
+    "pdf-btn": "PDF Menu"
   },
   "se":{
     "meal-h3-price": "Cena:",
@@ -21,7 +22,8 @@ translations = {
     "meal-td-large": "Velika",
     "meal-h3-rating": "Ocena",
     "meal-h3-rateit": "Oceni!",
-    "meal-btn-rate": "Oceni"
+    "meal-btn-rate": "Oceni",
+    "pdf-btn": "PDF Meni"
   },
   "ch": {
     "meal-h3-price": "价钱:",
@@ -33,7 +35,8 @@ translations = {
     "meal-td-large": "大",
     "meal-h3-rating": "评分",
     "meal-h3-rateit": "评价!",
-    "meal-btn-rate": "评分"
+    "meal-btn-rate": "评分",
+    "pdf-btn": "PDF菜单"
   }
 
 }

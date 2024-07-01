@@ -33,7 +33,7 @@ window.onload = function()
                                 </button>
                                 <div class="logo">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="index.html">
-                                        <img src="images/logo.png" alt="">
+                                        <img src="images/mylogo.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ window.onload = function()
                     <div class="footer-in-main">
                         <div class="footer-logo">
                             <div class="text-center">
-                                <img src="images/logo.png" alt="" />
+                                <img src="images/mylogo.png" alt="" />
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -132,7 +132,7 @@ window.onload = function()
                                 </p>
                                 <p>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span><a href="#">support@foodfunday.com</a></span>
+                                    <span><a href="#">support@dzekicen.com</a></span>
                                 </p>
                             </div>
                             <!-- end footer-box-c -->

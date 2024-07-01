@@ -11,7 +11,8 @@
         "menu-h2-drinks": "DRINKS",
         "menu-btn-sort": "Sort by Name",
         "menu-btn-price": "Sort by Price",
-        "menu-btn-filter": "Apply Filters"
+        "menu-btn-filter": "Apply Filters",
+        "pdf-btn": "PDF Menu"
       },
     se:
     {
@@ -23,7 +24,8 @@
         "menu-h2-drinks": "PIĆA",
         "menu-btn-sort": "Sortiraj po imenu",
         "menu-btn-price": "Sortiraj po ceni",
-        "menu-btn-filter": "Primeni filtere"
+        "menu-btn-filter": "Primeni filtere",
+        "pdf-btn": "PDF Meni"
     }
     ,
     ch:
@@ -36,7 +38,8 @@
         "menu-h2-drinks": "饮料",
         "menu-btn-sort": "按名称排序",
         "menu-btn-price": "按价格排序",
-        "menu-btn-filter": "应用过滤器"
+        "menu-btn-filter": "应用过滤器",
+        "pdf-btn": "PDF菜单"
     }
     
   };

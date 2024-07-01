@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 
     <!-- Site Metas -->
-    <title>Food Funday Restaurant - One page HTML Responsive</title>
+    <title>Džek & Čen Restaurant - Meal </title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,6 +25,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/menu.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- color -->
@@ -38,6 +39,7 @@
     <script src="js/breadcrumbs.js"></script>
     <script src="js/translate_meals.js"></script>
     <script src="js/translate_meal.js"></script>
+    <script src="js/jspdf.umd.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -121,6 +123,9 @@
                 
                         <br>
                         <button class="btn orange-buttons" onclick="rateMeal()" data-translate-key="meal-btn-rate">Rate</button>
+                        <div class="pdf-container">
+                            <button id="generate-pdf" data-translate-key="pdf-btn">PDF Menu</button>
+                        </div>
                     </div>
                 </div>
                 <!-- end col -->
@@ -140,6 +145,7 @@
     <div id="stub-footer"></div>
     <script src="js/navbar_footer_loader.js"></script>
     <script src="js/meal.js"></script>
+    <script src="js/generatePDF.js"></script>
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
